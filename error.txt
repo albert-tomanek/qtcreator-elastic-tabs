@@ -1,0 +1,34 @@
+[Thread 0x7fff7dffb6c0 (LWP 271871) exited]
+
+Thread 1 "qtcreator" received signal SIGSEGV, Segmentation fault.
+0x00007ffff69f0e29 in QFragmentMapData<QTextBlockData>::minimum (this=<optimized out>,
+    n=<optimized out>, this=<optimized out>, n=<optimized out>)
+    at ./src/gui/text/qfragmentmap_p.h:137
+warning: 137    ./src/gui/text/qfragmentmap_p.h: No such file or directory
+(gdb) bt
+#0  0x00007ffff69f0e29 in QFragmentMapData<QTextBlockData>::minimum
+    (this=0x5555593c0270, n=<optimized out>, this=<optimized out>, n=<optimized out>)
+    at ./src/gui/text/qfragmentmap_p.h:137
+#1  QFragmentMap<QTextBlockData>::begin (this=0x5555593c0270)
+    at ./src/gui/text/qfragmentmap_p.h:779
+#2  QTextDocument::begin (this=<optimized out>) at ./src/gui/text/qtextdocument.cpp:1701
+#3  0x00007fffb8b35d4a in ElasticTabstops::Handler::restoreDefaultTabs
+    (this=this@entry=0x555557c739b0)
+    at /home/albert/Projects/Qt Creator elastic tabs/src/elastictabstops.cpp:260
+#4  0x00007fffb8b35c90 in ElasticTabstops::Handler::~Handler (this=0x555557c739b0)
+    at /home/albert/Projects/Qt Creator elastic tabs/src/elastictabstops.cpp:121
+#5  0x00007fffb8b35e09 in ElasticTabstops::Handler::~Handler (this=0x5555593c0110)
+    at /home/albert/Projects/Qt Creator elastic tabs/src/elastictabstops.cpp:117
+#6  0x00007ffff5fe4403 in QtPrivate::QSlotObjectBase::call
+    (this=<optimized out>, r=0x555557c739b0, a=0x7fffffffc600, this=<optimized out>, r=<optimized out>, a=<optimized out>) at ./src/corelib/kernel/qobjectdefs_impl.h:486
+#7  doActivate<false> (sender=0x55555955deb0, signal_index=0, argv=0x7fffffffc600)
+    at ./src/corelib/kernel/qobject.cpp:4115
+#8  0x00007ffff5fe48c3 in QObject::destroyed
+    (this=this@entry=0x55555955deb0, _t1=<optimized out>, _t1@entry=0x55555955deb0)
+    at ./obj-x86_64-linux-gnu/src/corelib/kernel/moc_qobject.cpp:230
+#9  0x00007ffff71eda8b in QWidget::~QWidget (this=0x55555955deb0, this=<optimized out>)
+    at ./src/widgets/kernel/qwidget.cpp:1543
+#10 0x00007fffb2fc229d in CppEditor::CppEditorWidget::~CppEditorWidget() ()
+    at /usr/lib/x86_64-linux-gnu/qtcreator/plugins/libCppEditor.so
+#11 0x00007fffb83aebfa in TextEditor::BaseTextEditor::~BaseTextEditor() ()
+    at /usr/lib/x86_64-linux-gnu/qtcreator/plugins/libTextEditor.so

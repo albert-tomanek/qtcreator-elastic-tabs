@@ -1,0 +1,17 @@
+{
+    "Id" : "elastictabstops",
+    "Name" : "ElasticTabstops",
+    "Version" : "1.0.0",
+    "CompatVersion" : "1.0.0",
+    "VendorId" : "alberttomanek",
+    "Vendor" : "Albert Tomanek",
+    "Copyright" : "(C) Albert Tomanek",
+    "License" : "MIT",
+    "Category" : "Text Editor",
+    "Description" : "Elastic tabstops: tab characters align text into columns that grow and shrink with their contents (https://nick-gravgaard.com/elastic-tabstops/).",
+    "Url" : "https://nick-gravgaard.com/elastic-tabstops/",
+    "Dependencies" : [
+        { "Id" : "core", "Version" : "@QTC_VERSION@" },
+        { "Id" : "texteditor", "Version" : "@QTC_VERSION@" }
+    ]
+}
